@@ -567,7 +567,7 @@ class Metropolis(StepMethod):
             self.adaptive_scale_factor *= 0.5
         elif acc_rate<0.2:
             # reduce by ten percent
-            self.adaptive_scale_factor *= 0.9
+            self.adaptive_scale_factor *= 0.75
         elif acc_rate>0.95:
             # increase by factor of ten
             self.adaptive_scale_factor *= 10.0
@@ -576,7 +576,7 @@ class Metropolis(StepMethod):
             self.adaptive_scale_factor *= 2.0
         elif acc_rate>0.5:
             # increase by ten percent
-            self.adaptive_scale_factor *= 1.1
+            self.adaptive_scale_factor *= 1.33
         else:
             tuning = False
 
